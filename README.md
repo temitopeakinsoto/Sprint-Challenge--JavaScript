@@ -30,13 +30,38 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+ANS: map transforms each item in the array and returns a new array of transformed items with same size as that of old array. 
+The map() method will also call a provided function on every element in the array. 
+The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
+forEach on the other hand, is used whenever we want to iterate over the items 
+in an array and do something with the items. forEach method will iterate over a list and 
+apply some operation (with side effects to each list member).the forEach() method doesn’t actually return anything (undefined). 
+It simply calls a provided function on each element in your array which is allowed to mutate the calling array.
+
 2. What is the difference between a function and a method?
 
+ANS: Both Funtions and Methods are functions in javascript. 
+Simply put, A method is a function that belongs to an object. whereas a function is a function(although attached to the global object).
+
 3. What is closure?
+ANS: CLOSURE: According to MDN, A closure is the combination of a function and the lexical environment within which that function was declared. In order words, a closure is just a function that has references to the properties of it's outter scope or outter lexical environment.
 
 4. Describe the four rules of the 'this' keyword.
+ANS:
+  1. When the this keyword is globally used the this object refers to the Window object
+
+  2. When a function is called using the dot notation, the object before that dot is 'this'. 
+     therefore when this is used with and object, then 'this' refers to or points to the object's methods and properties attached to that object
+
+  3. Whenever a constructor function is used (and instatiated using the new keyword), 'this' refers to the specific instance of the object that is created and returned by 
+     the constructor function.
+
+  4. Whenever the call() or apply() method are used, 'this' is explicitly defined, allowing you to execute a function in different context!
 
 5. Why do we need super() in an extended class?
+ANS: We need super in an extended class to be able to invoke or make reference to that class. This makes it possible
+for the child class to be able to inherit properties and methods from the parent class.
 
 ## Project Set up
 
