@@ -76,7 +76,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 let universities = [];
-graduates.forEach(function(grad){
+graduates.forEach((grad) => {
   universities.push(grad.university);
 });
 universities.sort();
@@ -89,14 +89,14 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = graduates.map(function(grad){
+const contactInfo = graduates.map((grad) => {
   return grad.first_name + " " + grad.email;
 });
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = graduates.filter(function(grad){
+const uni = graduates.filter((grad) => {
   if(grad.university.substr(0,3) === "Uni"){
     return true;
   }
@@ -129,7 +129,7 @@ The individual values in the array should look like this "Name: Jackal, asiatic,
 
 */
 let animalNames = [];
-zooAnimals.forEach(function(animal){
+zooAnimals.forEach((animal) => {
   animalNames.push(
     {Name: animal.animal_name, 
       Scientific: animal.scientific_name
@@ -145,7 +145,7 @@ Create a new array named lowerCase and map over each name to convert them all to
 
 */
 
-const lowerCase = zooAnimals.map(function(animal){
+const lowerCase = zooAnimals.map((animal) => {
   return animal.animal_name.toLowerCase();
 });
 
@@ -159,17 +159,14 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 //const lowerPopulation = [];
 
-const lowerPopulation = zooAnimals.filter(function(animal){
+const lowerPopulation = zooAnimals.filter((animal) => {
   if(animal.population < 5){
     return "yes";
   }
   return false;
 });
 
-// const lowerPopulation = zooAnimals.filter(animal => animal.population < 5);
-
-
- console.log(lowerPopulation);
+console.log(lowerPopulation);
 
 
 /* Request 4: .reduce() 
@@ -183,11 +180,6 @@ const totalPopulation = zooAnimals.reduce((acc, animal) => {
 }, 0);
 
 console.log(totalPopulation);
-
-
-
-const populationTotal = 0;
-console.log(populationTotal);
 
 
 /* 
