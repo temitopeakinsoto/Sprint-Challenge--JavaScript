@@ -89,9 +89,7 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = graduates.map((grad) => {
-  return grad.first_name + " " + grad.email;
-});
+const contactInfo = graduates.map(grad => grad.first_name + " " + grad.email);
 console.log(contactInfo);
 
 
@@ -161,7 +159,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 const lowerPopulation = zooAnimals.filter((animal) => {
   if(animal.population < 5){
-    return "yes";
+    return true;
   }
   return false;
 });
